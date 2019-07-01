@@ -3,7 +3,7 @@ module.exports = {
     title: `Gynx Handmade`,
     author: `Laura Jinks Jimenez`,
     description: `Fiber arts and other crafts`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://gynxhandmade.com/`,
     social: {
       instagram: `gynxhandmade`,
     },
