@@ -1,3 +1,5 @@
+require(`dotenv`).config()
+
 module.exports = {
   siteMetadata: {
     title: `Gynx Handmade`,
@@ -9,6 +11,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -74,5 +77,21 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `gynxhandmade`,
+      },
+    },
+    {
+      // For development
+      // resolve: `..`,
+      resolve: `gatsby-source-instagram`,
+      options: {
+        type: `user-profile`,
+        username: `gynxhandmade`,
+      },
+    },
   ],
+
 }
