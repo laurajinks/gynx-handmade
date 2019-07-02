@@ -1,6 +1,7 @@
 import React from "react"
 import {NavBar} from './NavBar'
 import {HomepageNavBar} from "./HomepageNavBar"
+import {Footer} from './Footer'
 
 class Layout extends React.Component {
   render() {
@@ -24,7 +25,7 @@ class Layout extends React.Component {
         <header>{header}</header>
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()} Gynx Handmade
+          <Footer title={title} />
         </footer>
       </div>
     )
