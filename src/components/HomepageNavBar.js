@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { scale } from "../utils/typography"
 
 const style = {
   display: 'flex',
@@ -7,12 +8,16 @@ const style = {
   alignItems: 'center'
 }
 
-export const NavBar = (props) => {
+export const HomepageNavBar = (props) => {
   const {title} = props
- return (
+  return (
 
     <div style={style}>
-      <h1>
+      <h3
+        style={{
+          ...scale(1.5)
+        }}
+      >
         <Link
           style={{
             boxShadow: `none`,
@@ -23,7 +28,7 @@ export const NavBar = (props) => {
         >
           {title}
         </Link>
-      </h1>
+      </h3>
       <h3>
         <Link
           style={{

@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import {NavBar} from './NavBar'
+import {HomepageNavBar} from "./HomepageNavBar"
 
 class Layout extends React.Component {
   render() {
@@ -10,27 +10,11 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <NavBar />
+        <HomepageNavBar title={title}/>
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
+        <NavBar title={title}/>
       )
     }
     return (

@@ -5,6 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogList = path.resolve("./src/templates/blog-list-template.js")
   return graphql(
     `
       {
@@ -54,7 +55,7 @@ exports.createPages = ({ graphql, actions }) => {
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
         path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-        component: path.resolve("./src/templates/blog-list-template.js"),
+        component: blogList,
         context: {
           limit: postsPerPage,
           skip: i * postsPerPage,
