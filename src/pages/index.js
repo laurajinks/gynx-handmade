@@ -2,12 +2,11 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import InstagramProfile from '../components/InstagramProfile.js'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
-class BlogIndex extends React.Component ({data: {instaUserNode}}) {
+class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -39,7 +38,6 @@ class BlogIndex extends React.Component ({data: {instaUserNode}}) {
             </div>
           )
         })}
-        <InstagramProfile profile={instaUserNode} />
       </Layout>
     )
   }
@@ -69,19 +67,5 @@ export const pageQuery = graphql`
         }
       }
     }
-    instaUserNode {
-      id
-      username
-      full_name
-      biography
-      profile_pic_url_hd
-      edge_followed_by {
-        count
-      }
-      edge_follow {
-        count
-      }
-    }
   }
-  
 `
