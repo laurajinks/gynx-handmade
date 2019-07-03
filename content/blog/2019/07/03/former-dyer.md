@@ -1,6 +1,6 @@
 ---
 title: Former Dyer
-date: "2019-07-02"
+date: "2019-07-03"
 description: ''
 ---
 

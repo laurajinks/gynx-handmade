@@ -53,8 +53,8 @@ export const blogListQuery = graphql`
             slug
           }
           id
-      excerpt(pruneLength: 160)
-      html
+          excerpt(pruneLength: 160)
+          html
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
