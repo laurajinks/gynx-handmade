@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Bio from "../components/bio"
+import SEO from '../components/seo'
 import { rhythm } from "../utils/typography"
 
 export default class BlogList extends React.Component {
@@ -10,6 +11,7 @@ export default class BlogList extends React.Component {
     const posts = this.props.data.allMarkdownRemark.edges
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <SEO title={'All Posts'} />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
