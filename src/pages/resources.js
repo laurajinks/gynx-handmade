@@ -9,8 +9,8 @@ const Resources = (props) => {
   return (
     <Layout location={location} title={data.site.siteMetadata.title}>
       <SEO title="Resources" />
-      <Bio />
       Resources
+      <Bio />
     </Layout>
   )
 }

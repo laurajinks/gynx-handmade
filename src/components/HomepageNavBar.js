@@ -15,7 +15,8 @@ export const HomepageNavBar = (props) => {
     <div style={style}>
       <h3
         style={{
-          ...scale(1.5)
+          ...scale(1.5),
+          margin: '7px'
         }}
       >
         <Link
@@ -29,7 +30,7 @@ export const HomepageNavBar = (props) => {
           {title}
         </Link>
       </h3>
-      <h3>
+      <h3 style={{margin: '7px'}}>
         <Link
           style={{
             boxShadow: `none`,
@@ -41,7 +42,7 @@ export const HomepageNavBar = (props) => {
           Blog
         </Link>
       </h3>
-      <h3>
+      <h3 style={{margin: '7px'}}>
         <a
           style={{
             boxShadow: `none`,
@@ -53,7 +54,7 @@ export const HomepageNavBar = (props) => {
           Podcast
         </a>
       </h3>
-      <h3>
+      <h3 style={{margin: '7px'}}>
         <Link
           style={{
             boxShadow: `none`,
@@ -65,7 +66,7 @@ export const HomepageNavBar = (props) => {
           About
         </Link>
       </h3>
-      <h3>
+      <h3 style={{margin: '7px'}}>
         <Link
           style={{
             boxShadow: `none`,
@@ -77,7 +78,7 @@ export const HomepageNavBar = (props) => {
           Resources
         </Link>
       </h3>
-      <h3>
+      <h3 style={{margin: '7px'}}>
         <Link
           style={{
             boxShadow: `none`,

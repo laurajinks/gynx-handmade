@@ -12,7 +12,7 @@ export const NavBar = (props) => {
  return (
 
     <div style={style}>
-      <h1>
+      <h1 style={{margin: '7px'}}>
         <Link
           style={{
             boxShadow: `none`,
@@ -24,7 +24,7 @@ export const NavBar = (props) => {
           {title}
         </Link>
       </h1>
-      <h3>
+      <h3 style={{margin: '7px'}}>
         <Link
           style={{
             boxShadow: `none`,
@@ -36,7 +36,7 @@ export const NavBar = (props) => {
           Blog
         </Link>
       </h3>
-      <h3>
+      <h3 style={{margin: '7px'}}>
         <a
           style={{
             boxShadow: `none`,
@@ -48,7 +48,7 @@ export const NavBar = (props) => {
           Podcast
         </a>
       </h3>
-      <h3>
+      <h3 style={{margin: '7px'}}>
         <Link
           style={{
             boxShadow: `none`,
@@ -60,7 +60,7 @@ export const NavBar = (props) => {
           About
         </Link>
       </h3>
-      <h3>
+      <h3 style={{margin: '7px'}}>
         <Link
           style={{
             boxShadow: `none`,
@@ -72,7 +72,7 @@ export const NavBar = (props) => {
           Resources
         </Link>
       </h3>
-      <h3>
+      <h3 style={{margin: '7px'}}>
         <Link
           style={{
             boxShadow: `none`,

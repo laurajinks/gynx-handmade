@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Bio from "../components/bio"
 
 export default class BlogList extends React.Component {
   render() {
@@ -12,6 +13,7 @@ export default class BlogList extends React.Component {
           const title = node.frontmatter.title || node.fields.slug
           return <div key={node.fields.slug}>{title}</div>
         })}
+        <Bio />
       </Layout>
     )
   }
