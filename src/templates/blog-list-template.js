@@ -1,7 +1,8 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Bio from "../components/bio"
+import { rhythm } from "../utils/typography"
 
 export default class BlogList extends React.Component {
   render() {
@@ -11,7 +12,21 @@ export default class BlogList extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
-          return <div key={node.fields.slug}>{title}</div>
+          return (
+            <div key={node.fields.slug}>
+              <h3
+                style={{
+                  marginBottom: rhythm(1 / 4),
+                }}
+              >
+                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  {title}
+                </Link>
+              </h3>
+              <small>{node.frontmatter.date}</small>
+              <div dangerouslySetInnerHTML={{ __html: node.html }} />
+            </div>
+          )
         })}
         <Bio />
       </Layout>
@@ -37,8 +52,13 @@ export const blogListQuery = graphql`
           fields {
             slug
           }
+          id
+      excerpt(pruneLength: 160)
+      html
           frontmatter {
             title
+            date(formatString: "MMMM DD, YYYY")
+            description
           }
         }
       }
