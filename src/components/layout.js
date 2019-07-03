@@ -37,7 +37,8 @@ const style = {
   marginRight: 'auto',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center'
+  alignItems: 'center',
+  maxWidth: '90%'
 }
 
 export default Layout

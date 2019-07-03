@@ -37,6 +37,18 @@ export const NavBar = (props) => {
         </Link>
       </h3>
       <h3>
+        <a
+          style={{
+            boxShadow: `none`,
+            textDecoration: `none`,
+            color: `inherit`,
+          }}
+          href={'http://youtube.com/gynxhandmade'}
+        >
+          Podcast
+        </a>
+      </h3>
+      <h3>
         <Link
           style={{
             boxShadow: `none`,
