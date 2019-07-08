@@ -26,7 +26,7 @@ export const Footer = (props) => {
   return (
     <div className={styles['footer']}>
       <div className={styles['footerLinks']}>
-        <a href={`https://ravely.com/groups/gynx-handmade-podcast`}>
+        <a href={`https://ravelry.com/groups/gynx-handmade-podcast`}>
           <img
             src={ravelryImg}
             alt={'ravelry'}

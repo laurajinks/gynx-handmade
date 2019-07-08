@@ -9,7 +9,8 @@ const About = (props) => {
   return (
     <Layout location={location} title={data.site.siteMetadata.title}>
       <SEO title="About" />
-      About
+      <h1>About</h1>
+      <p>Coming Soon</p>
       <Bio />
     </Layout>
   )
