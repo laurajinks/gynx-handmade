@@ -19,22 +19,23 @@ class Layout extends React.Component {
       )
     }
     return (
+      <>
+      <header>{header}</header>
       <div
         style={style}
       >
-        <header>{header}</header>
-        <main>{children}</main>
+        <main style={{marginTop: '5em'}}>{children}</main>
         <footer>
           <Footer title={title} />
         </footer>
       </div>
+        </>
     )
   }
 }
 
 const style = {
-  marginLeft: 'auto',
-  marginRight: 'auto',
+  margin: '2em auto',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
