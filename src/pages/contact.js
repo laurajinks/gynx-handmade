@@ -10,9 +10,8 @@ const Contact = (props) => {
   return (
     <Layout location={location} title={data.site.siteMetadata.title}>
       <SEO title="Contact" />
-      Contact
-      <Bio />
       <ContactForm />
+      <Bio />
     </Layout>
   )
 }
