@@ -1,0 +1,23 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputField {
+    margin: 1em auto;
+    width: 70vw;
+}
+
+.textField {
+    margin: 1em auto;
+    width: 70vw;
+    height: 40vh;
+}
+
+.sendButton {
+    margin: 1em auto;
+    padding: .5em 1em;
+    background: rgb(47, 160, 162);
+    color: white;
+    border: none;
+}
