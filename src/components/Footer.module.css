@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footerLinks {
+    display: flex;
+}
+
+.footerImg {
+    fill: rgb(47, 160, 162);
+    width: 50px;
+    margin: 1em;
+}

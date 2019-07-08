@@ -8,7 +8,7 @@ module.exports = {
     siteUrl: `https://gynxhandmade.com/`,
     social: {
       instagram: `gynxhandmade`,
-      ravelry: 'gynx-handmade-podcast'
+      ravelry: 'gynx'
     },
   },
   plugins: [
