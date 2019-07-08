@@ -1,89 +1,184 @@
-import React from "react"
+import React, {useState} from "react"
 import { Link } from "gatsby"
-
-const style = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center'
-}
+import { scale } from "../utils/typography"
+import styles from './NavBar.module.css'
 
 export const NavBar = (props) => {
   const {title} = props
- return (
-
-    <div style={style}>
-      <h1 style={{margin: '7px'}}>
-        <Link
+  const [hamburger, setHamburger] = useState(false)
+  return (
+    <div>
+      <div className={styles['header']}>
+        <h3
           style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
+            ...scale(1.2),
+            margin: '7px'
           }}
-          to={`/`}
         >
-          {title}
-        </Link>
-      </h1>
-      <h3 style={{margin: '7px'}}>
-        <Link
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
+            }}
+            to={`/`}
+          >
+            {title}
+          </Link>
+        </h3>
+        <h3 style={{margin: '7px'}}>
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
+            }}
+            to={`/blog`}
+          >
+            Blog
+          </Link>
+        </h3>
+        <h3 style={{margin: '7px'}}>
+          <a
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
+            }}
+            href={'http://youtube.com/gynxhandmade'}
+          >
+            Podcast
+          </a>
+        </h3>
+        <h3 style={{margin: '7px'}}>
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
+            }}
+            to={`/about`}
+          >
+            About
+          </Link>
+        </h3>
+        <h3 style={{margin: '7px'}}>
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
+            }}
+            to={`/resources`}
+          >
+            Resources
+          </Link>
+        </h3>
+        <h3 style={{margin: '7px'}}>
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
+            }}
+            to={`/contact`}
+          >
+            Contact
+          </Link>
+        </h3>
+      </div>
+      <div className={styles['hamburgerHeader']}>
+        <h3
           style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
+            ...scale(1.2),
+            margin: '7px'
           }}
-          to={`/blog`}
         >
-          Blog
-        </Link>
-      </h3>
-      <h3 style={{margin: '7px'}}>
-        <a
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          href={'http://youtube.com/gynxhandmade'}
-        >
-          Podcast
-        </a>
-      </h3>
-      <h3 style={{margin: '7px'}}>
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/about`}
-        >
-          About
-        </Link>
-      </h3>
-      <h3 style={{margin: '7px'}}>
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/resources`}
-        >
-          Resources
-        </Link>
-      </h3>
-      <h3 style={{margin: '7px'}}>
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/contact`}
-        >
-          Contact
-        </Link>
-      </h3>
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
+            }}
+            to={`/`}
+          >
+            {title}
+          </Link>
+        </h3>
+        <div className={styles['burger']} onClick={() => setHamburger(!hamburger)}>
+          <div className={styles['line']} />
+          <div className={styles['line']} />
+          <div className={styles['line']} />
+        </div>
+        {hamburger && (
+          <div className={styles['dropDownMenu']}>
+            <div className={styles['dropDownLinks']}>
+              <h3 style={{margin: '7px'}}>
+                <Link
+                  style={{
+                    boxShadow: `none`,
+                    textDecoration: `none`,
+                    color: `inherit`,
+                  }}
+                  to={`/blog`}
+                >
+                  Blog
+                </Link>
+              </h3>
+              <h3 style={{margin: '7px'}}>
+                <a
+                  style={{
+                    boxShadow: `none`,
+                    textDecoration: `none`,
+                    color: `inherit`,
+                  }}
+                  href={'http://youtube.com/gynxhandmade'}
+                >
+                  Podcast
+                </a>
+              </h3>
+              <h3 style={{margin: '7px'}}>
+                <Link
+                  style={{
+                    boxShadow: `none`,
+                    textDecoration: `none`,
+                    color: `inherit`,
+                  }}
+                  to={`/about`}
+                >
+                  About
+                </Link>
+              </h3>
+              <h3 style={{margin: '7px'}}>
+                <Link
+                  style={{
+                    boxShadow: `none`,
+                    textDecoration: `none`,
+                    color: `inherit`,
+                  }}
+                  to={`/resources`}
+                >
+                  Resources
+                </Link>
+              </h3>
+              <h3 style={{margin: '7px'}}>
+                <Link
+                  style={{
+                    boxShadow: `none`,
+                    textDecoration: `none`,
+                    color: `inherit`,
+                  }}
+                  to={`/contact`}
+                >
+                  Contact
+                </Link>
+              </h3>
+            </div>
+          </div>
+        )
+        }
+      </div>
     </div>
+
   )
 }
