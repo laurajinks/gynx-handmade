@@ -6,6 +6,7 @@ import styles from './NavBar.module.css'
 export const NavBar = (props) => {
   const {title} = props
   const [hamburger, setHamburger] = useState(false)
+  const lineStyle = {background: hamburger ? 'white' : 'black'}
   return (
     <div>
       <div className={styles['header']}>
@@ -106,9 +107,9 @@ export const NavBar = (props) => {
           </Link>
         </h3>
         <div className={styles['burger']} onClick={() => setHamburger(!hamburger)}>
-          <div className={styles['line']} />
-          <div className={styles['line']} />
-          <div className={styles['line']} />
+          <div className={styles['line']} style={lineStyle} />
+          <div className={styles['line']} style={lineStyle} />
+          <div className={styles['line']} style={lineStyle} />
         </div>
         {hamburger && (
           <div className={styles['dropDownMenu']}>
