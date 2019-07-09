@@ -96,6 +96,14 @@ module.exports = {
         username: `gynxhandmade`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Raleway']
+        }
+      }
+    },
   ],
 
 }
