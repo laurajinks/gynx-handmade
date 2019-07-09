@@ -1,6 +1,5 @@
 import React, {useState} from "react"
 import { Link } from "gatsby"
-import { scale } from "../utils/typography"
 import styles from './NavBar.module.css'
 
 export const HomepageNavBar = (props) => {
@@ -10,11 +9,8 @@ export const HomepageNavBar = (props) => {
   return (
   <div>
     <div className={styles['header']}>
-      <h3
-        style={{
-          ...scale(1.5),
-          margin: '7px'
-        }}
+      <h1
+        className={styles['logo']}
       >
         <Link
           style={{
@@ -26,8 +22,8 @@ export const HomepageNavBar = (props) => {
         >
           {title}
         </Link>
-      </h3>
-      <h3 style={{margin: '7px'}}>
+      </h1>
+      <h3 className={styles['links']}>
         <Link
           style={{
             boxShadow: `none`,
@@ -39,7 +35,7 @@ export const HomepageNavBar = (props) => {
           Blog
         </Link>
       </h3>
-      <h3 style={{margin: '7px'}}>
+      <h3 className={styles['links']}>
         <a
           style={{
             boxShadow: `none`,
@@ -51,7 +47,7 @@ export const HomepageNavBar = (props) => {
           Podcast
         </a>
       </h3>
-      <h3 style={{margin: '7px'}}>
+      <h3 className={styles['links']}>
         <Link
           style={{
             boxShadow: `none`,
@@ -63,7 +59,7 @@ export const HomepageNavBar = (props) => {
           About
         </Link>
       </h3>
-      <h3 style={{margin: '7px'}}>
+      <h3 className={styles['links']}>
         <Link
           style={{
             boxShadow: `none`,
@@ -75,7 +71,7 @@ export const HomepageNavBar = (props) => {
           Resources
         </Link>
       </h3>
-      <h3 style={{margin: '7px'}}>
+      <h3 className={styles['links']}>
         <Link
           style={{
             boxShadow: `none`,
@@ -90,10 +86,7 @@ export const HomepageNavBar = (props) => {
     </div>
     <div className={styles['hamburgerHeader']}>
       <h3
-        style={{
-          ...scale(1.2),
-          margin: '7px'
-        }}
+        className={styles['logo']}
       >
         <Link
           style={{
@@ -114,7 +107,7 @@ export const HomepageNavBar = (props) => {
       {hamburger && (
         <div className={styles['dropDownMenu']}>
           <div className={styles['dropDownLinks']}>
-            <h3 style={{margin: '7px'}}>
+            <h6 style={{margin: '7px'}}>
               <Link
                 style={{
                   boxShadow: `none`,
@@ -125,8 +118,8 @@ export const HomepageNavBar = (props) => {
               >
                 Blog
               </Link>
-            </h3>
-            <h3 style={{margin: '7px'}}>
+            </h6>
+            <h6 style={{margin: '7px'}}>
               <a
                 style={{
                   boxShadow: `none`,
@@ -137,8 +130,8 @@ export const HomepageNavBar = (props) => {
               >
                 Podcast
               </a>
-            </h3>
-            <h3 style={{margin: '7px'}}>
+            </h6>
+            <h6 style={{margin: '7px'}}>
               <Link
                 style={{
                   boxShadow: `none`,
@@ -149,8 +142,8 @@ export const HomepageNavBar = (props) => {
               >
                 About
               </Link>
-            </h3>
-            <h3 style={{margin: '7px'}}>
+            </h6>
+            <h6 style={{margin: '7px'}}>
               <Link
                 style={{
                   boxShadow: `none`,
@@ -161,8 +154,8 @@ export const HomepageNavBar = (props) => {
               >
                 Resources
               </Link>
-            </h3>
-            <h3 style={{margin: '7px'}}>
+            </h6>
+            <h6 style={{margin: '7px'}}>
               <Link
                 style={{
                   boxShadow: `none`,
@@ -173,7 +166,7 @@ export const HomepageNavBar = (props) => {
               >
                 Contact
               </Link>
-            </h3>
+            </h6>
           </div>
       </div>
       )

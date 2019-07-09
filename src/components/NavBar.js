@@ -10,11 +10,8 @@ export const NavBar = (props) => {
   return (
     <div>
       <div className={styles['header']}>
-        <h3
-          style={{
-            ...scale(1.2),
-            margin: '7px'
-          }}
+        <h1
+          className={styles['logo']}
         >
           <Link
             style={{
@@ -26,8 +23,8 @@ export const NavBar = (props) => {
           >
             {title}
           </Link>
-        </h3>
-        <h3 style={{margin: '7px'}}>
+        </h1>
+        <h3 className={styles['links']}>
           <Link
             style={{
               boxShadow: `none`,
@@ -39,7 +36,7 @@ export const NavBar = (props) => {
             Blog
           </Link>
         </h3>
-        <h3 style={{margin: '7px'}}>
+        <h3 className={styles['links']}>
           <a
             style={{
               boxShadow: `none`,
@@ -51,7 +48,7 @@ export const NavBar = (props) => {
             Podcast
           </a>
         </h3>
-        <h3 style={{margin: '7px'}}>
+        <h3 className={styles['links']}>
           <Link
             style={{
               boxShadow: `none`,
@@ -63,7 +60,7 @@ export const NavBar = (props) => {
             About
           </Link>
         </h3>
-        <h3 style={{margin: '7px'}}>
+        <h3 className={styles['links']}>
           <Link
             style={{
               boxShadow: `none`,
@@ -75,7 +72,7 @@ export const NavBar = (props) => {
             Resources
           </Link>
         </h3>
-        <h3 style={{margin: '7px'}}>
+        <h3 className={styles['links']}>
           <Link
             style={{
               boxShadow: `none`,
@@ -90,10 +87,7 @@ export const NavBar = (props) => {
       </div>
       <div className={styles['hamburgerHeader']}>
         <h3
-          style={{
-            ...scale(1.2),
-            margin: '7px'
-          }}
+          className={styles['logo']}
         >
           <Link
             style={{

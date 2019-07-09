@@ -24,7 +24,7 @@ class Layout extends React.Component {
       <div
         style={style}
       >
-        <main style={{marginTop: '5em'}}>{children}</main>
+        <main style={{marginTop: '6em'}}>{children}</main>
         <footer>
           <Footer title={title} />
         </footer>
@@ -35,7 +35,7 @@ class Layout extends React.Component {
 }
 
 const style = {
-  margin: '2em auto',
+  margin: '3em auto',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
