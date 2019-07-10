@@ -21,10 +21,15 @@
 
 .logo {
     margin: 1em 2em;
+    font-weight: 800;
 }
 
 .links {
     margin: 1em;
+}
+
+.links:hover {
+    color: darkslategray;
 }
 
 @media (max-width: 1000px) {
@@ -84,6 +89,9 @@
         align-self: center;
         margin: 2em;
         color: white;
+    }
+    .dropDownLinks a:hover {
+        color: darkslategray;
     }
 }
 
