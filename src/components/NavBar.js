@@ -1,6 +1,5 @@
 import React, {useState} from "react"
 import { Link } from "gatsby"
-import { scale } from "../utils/typography"
 import styles from './NavBar.module.css'
 
 export const NavBar = (props) => {

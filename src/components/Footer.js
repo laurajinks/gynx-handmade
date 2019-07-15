@@ -2,12 +2,7 @@ import React from "react"
 import ravelryImg from '../../content/assets/ravelry-logo-svgrepo-com.svg'
 import instagramImg from '../../content/assets/iconmonstr-instagram-11.svg'
 import { graphql, useStaticQuery } from "gatsby"
-import { rhythm } from "../utils/typography"
 import styles from './Footer.module.css'
-
-const style = {
-
-}
 
 export const Footer = (props) => {
   const data = useStaticQuery(graphql`

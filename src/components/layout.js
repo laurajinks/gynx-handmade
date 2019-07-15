@@ -1,26 +1,14 @@
 import React from "react"
 import {NavBar} from './NavBar'
-import {HomepageNavBar} from "./HomepageNavBar"
 import {Footer} from './Footer'
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+    const { title, children } = this.props
 
-    if (location.pathname === rootPath) {
-      header = (
-        <HomepageNavBar title={title}/>
-      )
-    } else {
-      header = (
-        <NavBar title={title}/>
-      )
-    }
     return (
       <>
-      <header>{header}</header>
+      <header><NavBar title={title}/></header>
       <div
         style={style}
       >
